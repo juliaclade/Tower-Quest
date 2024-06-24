@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="CurRoundTotalRounds" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-image: url(images/background.png)" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng201.team0.gui.SetupRoundScreenController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="283.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="362.0" minWidth="10.0" prefWidth="320.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="297.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="341.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="391.0" minHeight="10.0" prefHeight="308.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="148.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5f7305f0" height="58.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1005.0" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3">
+         <children>
+            <Label text="Round" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Helvetica Neue Medium" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="curRoundTotalRounds" prefHeight="21.0" prefWidth="60.0" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" x="1.0">
+               <image>
+                  <Image url="@../images/diamon.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="126.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="playerMoneyLabel" prefHeight="21.0" prefWidth="60.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <GridPane.margin>
+            <Insets left="16.0" right="16.0" top="16.0" />
+         </GridPane.margin>
+      </HBox>
+      <Separator prefHeight="1.0" prefWidth="300.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+      <Label contentDisplay="CENTER" prefHeight="32.0" prefWidth="283.0" style="-fx-background-color: #426200;" text=" Select one of the options: " textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="Helvetica Neue Medium" size="20.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Button fx:id="round1Button" mnemonicParsing="false" prefHeight="290.0" prefWidth="254.0" style="-fx-background-image: url(images/rocks.png)" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <graphic>
+            <HBox prefHeight="100.0" prefWidth="201.0" spacing="5.0">
+               <children>
+                  <VBox prefHeight="344.0" prefWidth="374.0">
+                     <children>
+                        <Label style="-fx-background-color: #4D4F4F;" text="Easy" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Helvetica Neue Bold" size="21.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="60.0" top="16.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="round1LenTrackLabel" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #4D4F4F;" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue Bold" size="17.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="30.0" top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="round1NumCartsLabel" alignment="BOTTOM_LEFT" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #4D4F4F;" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue Bold" size="17.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="30.0" top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="22.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+         </graphic>
+      </Button>
+      <Button fx:id="round2Button" mnemonicParsing="false" prefHeight="290.0" prefWidth="250.0" style="-fx-background-image: url(images/rocks.png)" text="Round 2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <graphic>
+            <HBox prefHeight="290.0" prefWidth="290.0" spacing="5.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="268.0" prefWidth="230.0">
+                     <children>
+                        <Label style="-fx-background-color: #4D4F4F;" text="Medium" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Helvetica Neue Bold" size="21.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="60.0" top="16.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="round2LenTrackLabel" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #4D4F4F;" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue Bold" size="17.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="30.0" top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="round2NumCartsLabel" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #4D4F4F;" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue Bold" size="17.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="30.0" top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="22.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </graphic>
+      </Button>
+      <Button fx:id="round3Button" mnemonicParsing="false" prefHeight="290.0" prefWidth="250.0" style="-fx-background-image: url(images/rocks.png)" text="Round 3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <graphic>
+            <HBox prefHeight="290.0" prefWidth="290.0" spacing="5.0">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="268.0" prefWidth="273.0">
+                     <children>
+                        <Label style="-fx-background-color: #4D4F4F;" text="Hard" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="Helvetica Neue Bold" size="21.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="60.0" top="16.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="round3LenTrackLabel" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #4D4F4F;" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue Bold" size="17.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="30.0" top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="round3NumCartsLabel" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #4D4F4F;" textFill="WHITE">
+                           <font>
+                              <Font name="Helvetica Neue Bold" size="17.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="30.0" top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets top="22.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </graphic>
+      </Button>
+      <Button fx:id="continueButton" mnemonicParsing="false" onAction="#continueButtonPressed" prefHeight="26.0" prefWidth="250.0" text="Start Round" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <font>
+            <Font name="Helvetica Neue" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorMessageLabel" style="-fx-background-color: E2964D;" textFill="#dd0808" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="20.0" />
+         </GridPane.margin>
+         <font>
+            <Font name="Open Sans Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="storeButton" mnemonicParsing="false" onAction="#goStore" prefHeight="26.0" prefWidth="250.0" text="Store" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Helvetica Neue" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="inventoryButton" mnemonicParsing="false" onAction="#goInventory" prefHeight="26.0" prefWidth="250.0" text="Inventory" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Helvetica Neue" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</GridPane>

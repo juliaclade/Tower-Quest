@@ -1,0 +1,81 @@
+plugins {
+    id 'application'
+    id 'java'
+    id "org.openjfx.javafxplugin" version "0.1.0"
+    id 'jacoco'
+}
+
+archivesBaseName = 'jcl186_kir21'
+group = 'seng201.team0'
+version = 'tower_quest'
+mainClassName = 'seng201.team0.App'
+
+def javaVersion = '17'
+def javafxVersion = '21.0.2'
+
+sourceCompatibility = "${javaVersion}"
+targetCompatibility = "${javaVersion}"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-controls
+    implementation "org.openjfx:javafx-controls:${javafxVersion}"
+
+    implementation "org.openjfx:javafx-media:${javafxVersion}"
+
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-fxml
+    implementation "org.openjfx:javafx-fxml:${javafxVersion}"
+
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = "${mainClassName}"
+}
+
+javafx {
+    version = "${javafxVersion}"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media']
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+    finalizedBy jacocoTestReport
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    from {
+        configurations.runtimeClasspath.collect {it.isDirectory()?it:zipTree(it)}
+    }
+}
+
+// Jacoco test coverage config
+jacoco {
+    toolVersion = "0.8.9"
+}
+
+jacocoTestReport {
+    executionData fileTree(project.rootDir) {
+        include '**/*.exec'
+    }
+    reports {
+        html.destination file("${buildDir}/reports/tests/coverage/")
+    }
+}

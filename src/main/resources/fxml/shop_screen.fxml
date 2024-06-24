@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.087" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seng201.team0.gui.ShopScreenController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="31.0" prefWidth="598.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#637307f0" height="75.0" layoutX="-7.0" layoutY="-11.0" stroke="TRANSPARENT" strokeType="INSIDE" width="913.0" />
+            <HBox prefHeight="47.0" prefWidth="898.0">
+               <children>
+                  <Label text="Round" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue Medium" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" top="16.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="curRoundTotalRounds" prefHeight="21.0" prefWidth="60.0" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" top="16.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue Medium" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" top="16.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="playerMoneyLabel" layoutX="3.0" prefHeight="21.0" prefWidth="60.0" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="70.0" top="16.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="320.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/diamon.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane fx:id="welcome" prefHeight="543.0" prefWidth="832.0"
+                  style="-fx-background-image: url(images/background.png)" GridPane.columnSpan="2" GridPane.rowSpan="3">
+               <children>
+                  <Label layoutX="138.0" layoutY="308.0" prefHeight="65.0" prefWidth="599.0" style="-fx-background-color: E2964D;" text="   It is shopping time!" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue Bold Italic" size="52.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label layoutX="139.0" layoutY="254.0" prefHeight="47.0" prefWidth="592.0" style="-fx-background-color: E2964D;" text="             Welcome to the shop" textAlignment="JUSTIFY" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica Neue Bold Italic" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Accordion GridPane.columnSpan="2" GridPane.rowSpan="3">
+              <panes>
+                <TitledPane animated="false" style="-fx-background-image: url(images/background.png)" text="Buy">
+                     <content>
+                        <GridPane prefHeight="735.0" prefWidth="1398.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="139.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="140.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="140.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="136.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="134.0" />
+                              <ColumnConstraints />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="111.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="238.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="215.0" minHeight="10.0" prefHeight="155.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="380.0" minHeight="10.0" prefHeight="164.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="252.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Pane prefHeight="491.0" prefWidth="658.0" style="-fx-background-image: url(images/background.png);" GridPane.columnSpan="6" GridPane.rowSpan="6">
+                                 <opaqueInsets>
+                                    <Insets right="6.0" top="4.0" />
+                                 </opaqueInsets>
+                                 <children>
+                                    <Button fx:id="buyButton" layoutX="706.0" layoutY="441.0" mnemonicParsing="false" onAction="#buy" prefHeight="24.0" text="Buy">
+                                       <padding>
+                                          <Insets left="20.0" right="21.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="backButton" layoutX="794.0" layoutY="440.0" mnemonicParsing="false" onAction="#back" prefHeight="24.0" prefWidth="61.0" text="Back" />
+                                    <Label fx:id="buyErrorMessageLabel" layoutX="14.0" layoutY="444.0" style="-fx-background-color: E2964D;" textFill="#dd0808">
+                                       <font>
+                                          <Font name="Open Sans Bold Italic" size="12.0" />
+                                       </font></Label>
+                                 </children>
+                              </Pane>
+                              <Label style="-fx-background-color: #637307;" text="Towers" textFill="WHITE">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="16.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="16.0" top="47.0" />
+                                 </GridPane.margin>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label style="-fx-background-color: #637307;" text="Upgrades" textFill="WHITE" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="16.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="16.0" top="20.0" />
+                                 </GridPane.margin>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Button fx:id="shopTower1Button" graphicTextGap="2.0" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="shopTower2Button" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="shopTower3Button" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="shopTower4Button" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="shopTower5Button" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font></Button>
+                              <Button fx:id="shopUpgrade1Button" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font></Button>
+                              <Button fx:id="shopUpgrade2Button" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font></Button>
+                              <Button fx:id="shopUpgrade3Button" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font></Button>
+                              <Button fx:id="shopUpgrade4Button" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font></Button>
+                              <Button fx:id="shopUpgrade5Button" mnemonicParsing="false" prefHeight="142.0" prefWidth="150.0" style="-fx-background-color: #f1f1f1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10 , 0 , 0 , 1 );" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="13.0" />
+                                 </font></Button>
+                           </children>
+                           <padding>
+                              <Insets top="1.0" />
+                           </padding>
+                        </GridPane>
+                     </content>
+                </TitledPane>
+                <TitledPane fx:id="holaaa" animated="false" text="Sell">
+                     <content>
+                        <GridPane>
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.7902069091797" minWidth="10.0" prefWidth="165.04751586914062" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.95248413085938" minWidth="10.0" prefWidth="162.91885375976562" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.95248413085938" minWidth="10.0" prefWidth="162.91885375976562" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.03363037109375" minWidth="10.0" prefWidth="181.03363037109375" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.96856689453125" minWidth="10.0" prefWidth="166.79095458984375" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="143.2765350341797" minHeight="0.6889572143554688" prefHeight="39.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="262.81104278564453" minHeight="10.0" prefHeight="222.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="228.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url(images/background.png);" GridPane.columnSpan="5" GridPane.rowSpan="3">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Pane>
+                              <ScrollPane fx:id="scrollpane1" prefHeight="177.0" prefWidth="873.0" GridPane.columnSpan="5" GridPane.rowIndex="2">
+                                 <content>
+                                    <HBox fx:id="currentHxUpgrade"
+                                          alignment="CENTER" prefHeight="160.0" prefWidth="14.0">
+                                       <padding>
+                                          <Insets left="14.0" top="12.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets bottom="5.0" left="1.0" top="6.0" />
+                                       </opaqueInsets>
+                                    </HBox>
+                                 </content>
+                                 <GridPane.margin>
+                                    <Insets bottom="50.0" left="13.0" right="10.0" />
+                                 </GridPane.margin>
+                              </ScrollPane>
+                              <ScrollPane fx:id="scrolepanel2" prefHeight="186.0" prefWidth="651.0" GridPane.columnSpan="5" GridPane.rowIndex="1">
+                                 <content>
+                                    <HBox fx:id="currentHxTowersSell"
+                                          alignment="CENTER" prefHeight="98.0" prefWidth="14.0">
+                                       <padding>
+                                          <Insets left="14.0" top="12.0" />
+                                       </padding>
+                                       <opaqueInsets>
+                                          <Insets bottom="5.0" left="1.0" top="6.0" />
+                                       </opaqueInsets>
+                                    </HBox>
+                                 </content>
+                                 <GridPane.margin>
+                                    <Insets bottom="50.0" left="14.0" right="10.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </ScrollPane>
+                              <Button fx:id="backButton1" mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="61.0" text="Back" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="9.0" left="101.0" top="184.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="sellButton" mnemonicParsing="false" onAction="#sell" prefHeight="24.0" prefWidth="61.0" text="Sell" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="9.0" top="184.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Label style="-fx-background-color: #637307;" text="Your Towers" textFill="WHITE">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <GridPane.margin>
+                                    <Insets left="13.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label style="-fx-background-color: #637307;" text="Your Upgrades" textFill="WHITE" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="Helvetica Neue Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="2.0" />
+                                 </padding>
+                                 <GridPane.margin>
+                                    <Insets bottom="8.0" left="16.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="sellErrorMessage" style="-fx-background-color: E2964D;" textFill="#dd0505" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="19.0" left="14.0" top="195.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font name="Open Sans Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets top="1.0" />
+                           </padding>
+                        </GridPane>
+                     </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </children>
+      </GridPane>
+  </items>
+</SplitPane>
